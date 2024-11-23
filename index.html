@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Azama Matulezi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome untuk ikon -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFC300; /* Mengubah warna latar belakang menjadi kuning gelap */
+            color: #1B1833;
+            overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+        }
+
+        header {
+            background-color: #441752; /* Warna ungu gelap tanpa transparansi */
+            color: #F29F58; /* Warna kuning Shell */
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .animated-title {
+            font-size: 3em;
+            animation: move 5s linear infinite alternate;
+            text-shadow: 2px 2px 5px #F29F58; /* Efek 3D */
+        }
+
+        .subtitle {
+            font-size: 2em; /* Ukuran font subjudul diperbesar */
+            color: #F29F58; /* Warna kuning Shell */
+            margin-top: 10px; /* Jarak antara judul dan subjudul */
+            text-shadow: 1px 1px 3px #441752; /* Efek 3D pada subjudul */
+        }
+
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #F29F58; /* Warna kuning Shell */
+            color: #1B1833;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #AB4459;
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 0 10px #F29F58, 0 0 20px #F29F58;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+            border-radius: 8px;
+            animation: fadeIn 1s ease-in-out; /* Animasi fade in */
+            position: relative;
+            overflow: hidden;
+            text-align: center; /* Pusatkan teks */
+            background-color: rgba(27, 24, 51, 0.8); /* Warna latar belakang bagian dengan transparansi */
+            color: #F29F58; /* Warna teks */
+        }
+
+        h2 {
+            color: #F29F58;
+            margin-bottom: 20px; /* Jarak antara judul dan konten */
+            font-size: 2em; /* Ukuran font judul */
+        }
+
+        .contact {
+            background-color: #1B1833;
+            color: #FFC300; /* Mengubah warna teks menjadi kuning gelap */
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .image-container {
+            text-align: center; /* Pindahkan gambar ke tengah */
+            margin: 20px 0;
+            position: relative; /* Untuk efek cahaya */
+        }
+
+        .image-container img {
+            max-width: 250px; /* Ukuran lebih besar untuk foto */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #F29F58, 0 0 20px #F29F58; /* Efek cahaya pada gambar */
+        }
+
+        .side-image {
+            max-width: 250px; /* Ukuran gambar samping */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #F29F58, 0 0 20px #F29F58; /* Efek cahaya pada gambar */
+            position: absolute; /* Memungkinkan penempatan gambar di posisi tertentu */
+        }
+
+        .right-image {
+            right: 20px; /* Jarak dari kanan */
+            top: 20px; /* Jarak dari atas */
+        }
+
+        .left-image {
+            left: 20px; /* Jarak dari kiri */
+            top: 20px; /* Jarak dari atas */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .bagan {
+            background-color: rgba(255, 255, 255, 0.9); /* Warna putih dengan transparansi */
+            color: #1B1833; /* Warna hitam untuk tulisan */
+            border-radius: 8px;
+            padding: 40px; /* Memperbesar padding */
+            margin: 10px 0;
+            position: relative;
+            border: 2px solid #F29F58; /* Garis bercahaya */
+            box-shadow: 0 0 20px #F29F58, 0 0 30px #F29F58; /* Efek cahaya selalu menyala */
+            display: block; /* Membuat bagan vertikal */
+            width: 90%; /* Ukuran tetap untuk bagan */
+            margin-left: auto; /* Pusatkan bagan */
+            margin-right: auto; /* Pusatkan bagan */
+            text-align: center; /* Pusatkan teks dalam bagan */
+        }
+
+        .separator {
+            border-bottom: 4px solid rgba(255, 0, 0, 0.8); /* Garis pembatas lebih besar dan berwarna merah */
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Efek cahaya pada garis pembatas */
+        }
+
+        footer {
+            background-color: #441752; /* Warna ungu gelap */
+            color: #F29F58; /* Warna kuning Shell */
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 250px; /* Ukuran logo diperbesar */
+        }
+
+        .background-image {
+            background-image: url('https://media.istockphoto.com/id/1383475502/id/foto/gedung-kantor-shell-perusahaan-energi-minyak-dan-gas.jpg?s=170667a&w=0&k=20&c=pMJrxN2kNFVnyHcSKF5-4Ko6dZLJeNdiGlUzU_9Uy88='); /* Gambar latar belakang diperbesar */
+            background-size: cover; /* Mengatur ukuran gambar agar menutupi seluruh area */
+            background-position: center; /* Memusatkan gambar */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; /* Menempatkan gambar di belakang konten */
+            opacity: 0.8; /* Menambahkan sedikit warna untuk menutupi gambar */
+        }
+
+        .icon {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #F29F58;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image"></div> <!-- Gambar latar belakang -->
+
+<header>
+    <h1 class="animated-title">Azama Matulezi Portfolio</h1>
+    <div class="subtitle">CEO OF BRUNEI</div> <!-- Subjudul ditambahkan -->
+    <img src="https://www.ipsgroupbv.com/wp-content/uploads/2019/06/Brunei_Shell.jpg" alt="Brunei Shell Logo" class="logo">
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Recent Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class=" separator"></div> <!-- Garis kecil bercahaya -->
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="image-container">
+        <img src="c:\Users\mqalb\Downloads\WhatsApp Image 2024-11-23 at 11.48.15.jpeg" alt="My Photo"> <!-- Gambar diperbarui -->
+        <img src="c:\Users\mqalb\Downloads\w516IlqigB5VHl6hDYYta3BoWlUgaDIpS5jog3FcBRsWZ88E.jpg" alt="Left Photo" class="side-image left-image"> <!-- Gambar samping kiri -->
+        <img src="c:\Users\mqalb\Downloads\9mHSNd41HF4LCJ4VRNAXxCdhfKmZi0QzfOp3Crnyeub9QjnnA.jpg" alt="Right Photo" class="side-image right-image"> <!-- Gambar samping kanan -->
+    </div>
+    <p>I am an experienced entrepreneur with a strong background in the energy industry. With over 15 years of experience in this sector, I am committed to leading innovation and sustainability at Brunei Shell.</p>
+</section>
+
+<div class="separator"></div> <!-- Garis kecil bercahaya -->
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="bagan">CEO, Brunei Shell (2020 - Present)</div>
+    <div class="bagan">Operations Manager, Brunei Shell (2015 - 2020)</div>
+    <div class="bagan">Technical Staff, Brunei Shell (2010 - 2015)</div>
+    <div class="bagan">Research Assistant, Universiti Brunei Darussalam (2008 - 2010)</div>
+</section>
+
+<div class="separator"></div> <!-- Garis kecil bercahaya -->
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="bagan">Master of Business Administration (MBA), Universiti Brunei Darussalam (2009)</div>
+    <div class="bagan">Bachelor of Engineering, Universiti Teknologi Brunei (2007)</div>
+    <div class="bagan">Diploma in Mechanical Engineering, Politeknik Brunei (2005)</div>
+</section>
+
+<div class="separator"></div> <!-- Garis kecil bercahaya -->
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="bagan">Project Management</div>
+    <div class="bagan">Business Strategy</div>
+    <div class="bagan">Innovation and Product Development</div>
+    <div class="bagan">Data Analysis and Decision Making</div>
+    <div class="bagan">Communication and Negotiation</div>
+</section>
+
+<div class="separator"></div> <!-- Garis kecil bercahaya -->
+
+<section id="projects">
+    <h2>Recent Projects</h2>
+    <p>I have been involved in various projects focusing on sustainability and innovation in the energy sector. Some of my recent projects include:</p>
+    <div class="bagan">Renewable Energy Initiative: Developing strategies to integrate renewable energy sources into Brunei Shell's operations.</div>
+    <div class="bagan">Energy Efficiency Program: Leading a program to reduce energy consumption in production facilities.</div>
+    <div class="bagan">Technology Development Project: Collaborating with engineering teams to develop new technologies that enhance operational efficiency.</div>
+</section>
+
+<div class="separator"></div> <!-- Garis kecil bercahaya -->
+
+<div class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:azama.matulezi@example.com" style="color: #FFC300;">azama.matulezi@example.com</a></p>
+    <p>Phone: +673 123 4567</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/azama-matulezi" style="color: #FFC300;">linkedin.com/in/azama-matulezi</a></p>
+    <i class="fas fa-envelope icon"></i>
+    <i class="fas fa-phone icon"></i>
+    <i class="fab fa-linkedin icon"></i>
+</div>
+
+<footer>
+    <p>&copy; 2023 Azama Matulezi. All rights reserved.</p>
+</footer>
+
